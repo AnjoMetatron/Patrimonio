@@ -42,7 +42,7 @@ CONTROLE DE PATRIMONIO
 
 <a href="/patrimonios/editar/${item.id}">EDITAR</a>
 <a href="/patrimonios/excluir/${item.id}" onclick="return confirm('DESEJA EXCLUIR ESTE PATRIMONIO?')">EXCLUIR</a>
-
+  </c:forEach>
 
     </tbody>
 

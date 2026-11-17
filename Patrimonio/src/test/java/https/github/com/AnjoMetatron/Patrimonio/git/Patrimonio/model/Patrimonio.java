@@ -13,6 +13,10 @@ public class Patrimonio {
     @Column(name = "local", nullable = false, length = 255)
     private String Local;
 
+    public Patrimonio() {
+
+    }
+
     public long getID() {
         return ID;
     }
