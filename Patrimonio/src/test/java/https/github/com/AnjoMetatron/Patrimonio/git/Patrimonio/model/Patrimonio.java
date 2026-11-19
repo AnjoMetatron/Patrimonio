@@ -8,11 +8,6 @@ public class Patrimonio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ID;
-    @Column(name = "nr_patrimonio", nullable = false, length = 50)
-    private String nr_patrimonio;
-    @Column(name = "local", nullable = false, length = 255)
-    private String Local;
-
     public Patrimonio() {
 
     }
@@ -51,6 +46,10 @@ public class Patrimonio {
 
     @Column(name = "descricao", nullable = false, length = 255)
     private String descricao;
+    @Column(name = "nr_patrimonio", nullable = false, length = 50)
+    private String nr_patrimonio;
+    @Column(name = "local", nullable = false, length = 255)
+    private String Local;
 
     public Patrimonio(long ID, String nr_patrimonio, String local, String descricao) {
 
