@@ -7,17 +7,16 @@ import jakarta.persistence.*;
 public class Patrimonio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private Long id;
     public Patrimonio() {
 
     }
 
-    public long getID() {
-        return ID;
+    public Long getId() {
+        return id;
     }
-
-    public void setID(long ID) {
-        this.ID = ID;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNr_patrimonio() {
@@ -29,11 +28,11 @@ public class Patrimonio {
     }
 
     public String getLocal() {
-        return Local;
+        return local;
     }
 
     public void setLocal(String local) {
-        Local = local;
+        this.local = local;
     }
 
     public String getDescricao() {
@@ -49,13 +48,12 @@ public class Patrimonio {
     @Column(name = "nr_patrimonio", nullable = false, length = 50)
     private String nr_patrimonio;
     @Column(name = "local", nullable = false, length = 255)
-    private String Local;
+    private String local;
 
-    public Patrimonio(long ID, String nr_patrimonio, String local, String descricao) {
-
-        this.ID = ID;
+    public Patrimonio(Long id, String nr_patrimonio, String local, String descricao) {
+        this.id = id;
         this.nr_patrimonio = nr_patrimonio;
-        Local = local;
+        this.local = local;
         this.descricao = descricao;
     }
 }

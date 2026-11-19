@@ -25,8 +25,8 @@ public List<Patrimonio> listarTodos(){
       return repository.save(patrimonio);
     };
 
-    public void  Deletar(Long Id){
-        repository.deleteById(Id);
+    public void  Deletar(Long id){
+        repository.deleteById(id);
     };
 
 
