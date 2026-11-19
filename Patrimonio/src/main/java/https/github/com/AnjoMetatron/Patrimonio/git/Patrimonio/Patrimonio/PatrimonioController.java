@@ -1,4 +1,4 @@
-package https.github.com.AnjoMetatron.Patrimonio.git.Patrimonio.controller.Patrimonio;
+package https.github.com.AnjoMetatron.Patrimonio.git.Patrimonio.Patrimonio;
 
 import https.github.com.AnjoMetatron.Patrimonio.git.Patrimonio.model.Patrimonio;
 import https.github.com.AnjoMetatron.Patrimonio.git.Patrimonio.service.PatrimonioService;
@@ -48,7 +48,7 @@ return "formulario";
     return "redirect:/patrimonios";
 
 }
-@GetMapping("/excluir")
+@GetMapping("/excluir/{id}")
 
 public String excluir (@PathVariable("id") Long id){
     service.Deletar(id);
