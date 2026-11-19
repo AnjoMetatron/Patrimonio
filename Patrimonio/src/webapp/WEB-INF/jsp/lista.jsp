@@ -7,42 +7,43 @@
 <body>
 
 <h2>
-CONTROLE DE PATRIMONIO
+    CONTROLE DE PATRIMONIO
 </h2>
-<a href="/patrimonio/novo">CADASTRO NOVO</a>
+<a href="/patrimonios/novo">CADASTRO NOVO</a>
 <table>
     <thead>
-        <th>ID</th> <th>NR PATRIMONIO</th> <th>DESCRIÇÃO</th> <th>LOCAL</th> <th>AÇÕES</th>
+    <th>ID</th> <th>NR PATRIMONIO</th> <th>DESCRIÇÃO</th> <th>LOCAL</th> <th>AÇÕES</th>
     </thead>
- <tbody>
-          <c:forEach var="item" items="${listaPatrimonios}">
-          <tr>
+    <tbody>
+    <c:forEach var="item" items="${listarPatrimonios}">
+        <tr>
 
-          <td>
-          ${item.id}
-          </td>
+            <td>
+                ${item.id}
+            </td>
 
-          <td>
-          ${item.nrPatrimonio}
-          </td>
+            <td>
+                ${item.nr_patrimonio}
+            </td>
 
-          <td>
-          ${item.descricao}
-          </td>
+            <td>
+                ${item.descricao}
+            </td>
 
-          <td>
-          ${item.local}
-          </td>
+            <td>
+                ${item.local}
+            </td>
 
-          <td>
+            <td>
+                <a href="/patrimonios/editar/${item.id}">EDITAR</a>
+                <a href="/patrimonios/excluir/${item.id}" onclick="return confirm('DESEJA EXCLUIR ESTE PATRIMONIO?')">EXCLUIR</a>
 
-          </td>
+            </td>
 
-          </tr>
+        </tr>
 
-<a href="/patrimonios/editar/${item.id}">EDITAR</a>
-<a href="/patrimonios/excluir/${item.id}" onclick="return confirm('DESEJA EXCLUIR ESTE PATRIMONIO?')">EXCLUIR</a>
-  </c:forEach>
+
+        </c:forEach>
 
     </tbody>
 
